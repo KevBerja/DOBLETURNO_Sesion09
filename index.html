@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang ="es">
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css"></link>
+	<script src="https://code.jquery.com/jquery-2.2.4.js" integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI=" crossorigin="anonymous"></script>
+	<script src="jQuery/login.js"></script>
+	<title>Inicio</title>
+</head>
+<body>
+	<div class="col-md-6 col-md-offset-3" id="contenido">
+		<form id="formularioInicioSesion" role="form" method="post">
+			<h1>Bienvenid@ a la App de DOBLETURNO</h1>
+			<br></br>
+			  	<div class="form-group">
+			    <label for="txtUserLogin">Nombre de usuario</label>
+			    <input type="text" class="form-control" name="usuariolg" id="txtUserLogin" placeholder="Enter username">
+		  	</div>
+			  	<div class="form-group">
+			    <label for="txtPasswordLogin">Contraseña</label>
+			    <input type="password" class="form-control" name="passlg" id="txtPasswordLogin" placeholder="Enter password">
+		  	</div>
+	  		<button type="submit" class="btn btn-primary" id="btn_login">Iniciar sesión</button>
+	  		<button type="button" class="btn btn-default" id="btn_irRegistrar" onclick = "location='registrar.html'">Registrarse</button>
+		</form>
+</div>
+</body>
+</html>
