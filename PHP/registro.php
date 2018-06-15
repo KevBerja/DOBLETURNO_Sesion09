@@ -4,7 +4,7 @@ $email = $_POST['email'];
 $username = $_POST['usuario'];
 $password = $_POST['contra'];
 
-//Arreglos a usar
+//Array a usar
 $errores = array();
 $datos = array();
 
