@@ -1,6 +1,5 @@
 <?php
-
-$con = mysqli_connect("localhost", "root", "", "DOBLETURNO");
+include("conexion.php");
 
 $usuarios = mysqli_query($con, "SELECT username, password, activo, role FROM Usuarios WHERE username = '".$_POST['usuariolg']."' AND password = '".$_POST['passlg']."'");
 

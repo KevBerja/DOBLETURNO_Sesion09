@@ -1,4 +1,5 @@
 <?php
+include("conexion.php");
 
 $email = $_POST['email'];
 $username = $_POST['usuario'];
@@ -29,7 +30,6 @@ if (empty($_POST['contra'])) {
 
 //Generando respuesta
 if(empty($errores)) {
-	$con = mysqli_connect("localhost", "root", "", "DOBLETURNO");
 	$result = mysqli_query($con, "INSERT Usuarios(email, username, password, activo, role) VALUES('".$email."', '".$username."', '".$password."', '1', 'usuario')");
 	$datos['exito'] = true;
 	$datos['mensaje'] = 'El registro se ha realizado correctamente.';
