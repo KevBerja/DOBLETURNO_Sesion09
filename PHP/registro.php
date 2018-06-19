@@ -1,10 +1,11 @@
 <?php
 
+include("conexion.php");
+
 $email = $_POST['email'];
 $username = $_POST['usuario'];
 $password = $_POST['contra'];
 
-//Arreglos a usar
 $errores = array();
 $datos = array();
 
@@ -27,9 +28,7 @@ if (empty($_POST['contra'])) {
 	$password = $_POST['contra'];
 }
 
-//Generando respuesta
 if(empty($errores)) {
-	$con = mysqli_connect("localhost", "root", "", "DOBLETURNO");
 	$result = mysqli_query($con, "INSERT Usuarios(email, username, password, activo, role) VALUES('".$email."', '".$username."', '".$password."', '1', 'usuario')");
 	$datos['exito'] = true;
 	$datos['mensaje'] = 'El registro se ha realizado correctamente.';
@@ -38,7 +37,7 @@ if(empty($errores)) {
 	$datos['errores'] = $errores;
 }
 
-//Dar respuesta
 echo json_encode($datos);
 
+$con->close();
 ?>
