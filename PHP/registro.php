@@ -1,11 +1,11 @@
 <?php
+
 include("conexion.php");
 
 $email = $_POST['email'];
 $username = $_POST['usuario'];
 $password = $_POST['contra'];
 
-//Array a usar
 $errores = array();
 $datos = array();
 
@@ -28,7 +28,6 @@ if (empty($_POST['contra'])) {
 	$password = $_POST['contra'];
 }
 
-//Generando respuesta
 if(empty($errores)) {
 	$result = mysqli_query($con, "INSERT Usuarios(email, username, password, activo, role) VALUES('".$email."', '".$username."', '".$password."', '1', 'usuario')");
 	$datos['exito'] = true;
@@ -38,7 +37,7 @@ if(empty($errores)) {
 	$datos['errores'] = $errores;
 }
 
-//Dar respuesta
 echo json_encode($datos);
 
+$con->close();
 ?>
