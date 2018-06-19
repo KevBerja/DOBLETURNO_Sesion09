@@ -1,23 +1,22 @@
-jQuery(document).on('submit', '#formularioInicioSesion', function(event){
+with(document.login){
+	onsubmit = function(e){
+		e.preventDefault();
+		isAlert = true;
 
-	event.preventDefault();
-
-	jQuery.ajax({
-		url : 'PHP/inicioSesion.php',
-		type : 'POST',
-		dataType : 'json',
-		data : $(this).serialize(),
-	})
-	.done(function(respuesta) {
-		//Especificamos como actuar con los datos recibidos
-		if(!respuesta.error){
-				if(respuesta.tipo == "usuario"){
-					location.href = 'indexUsuario.html';
-				}else if (respuesta.tipo == "admin"){
-					location.href = 'indexAdmin.html';
-				}else{
-				window.alert("Usuario o contraseña incorrectos.");
-			}
+		if(isAlert&& username.value==""){
+			is=false;
+			alert("Username empty");
+			username.focus();
 		}
-	})
-});
+
+		if(isAlert && password.value==""){
+			isAlert=false;
+			alert("Password empty");
+			password.focus();
+		}
+		
+		if(isAlert){ 
+			submit(); 
+		}
+	}
+}

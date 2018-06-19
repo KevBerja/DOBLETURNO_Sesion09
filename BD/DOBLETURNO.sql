@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: localhost
--- Tiempo de generación: 31-05-2018 a las 08:14:41
+-- Tiempo de generación: 19-06-2018 a las 19:43:22
 -- Versión del servidor: 10.1.32-MariaDB
 -- Versión de PHP: 5.6.36
 
@@ -29,25 +29,26 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE `Usuarios` (
+  `userID` int(9) NOT NULL,
   `email` varchar(40) COLLATE utf8_bin NOT NULL,
   `username` varchar(20) COLLATE utf8_bin NOT NULL,
   `password` varchar(20) COLLATE utf8_bin NOT NULL,
   `activo` bit(1) NOT NULL,
   `role` varchar(7) COLLATE utf8_bin NOT NULL,
-  `fechaCreacion` datetime DEFAULT NULL,
-  `fechaUltimoAcceso` datetime DEFAULT NULL
+  `fechaCreacion` date DEFAULT NULL,
+  `fechaUltimoAcceso` date DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 
 --
 -- Volcado de datos para la tabla `Usuarios`
 --
 
-INSERT INTO `Usuarios` (`email`, `username`, `password`, `activo`, `role`, `fechaCreacion`, `fechaUltimoAcceso`) VALUES
-('admin@admin.com', 'admin', 'admin', b'1', 'admin', NULL, NULL),
-('jjcanada@ual.es', 'jjcanada', 'jjcanada', b'1', 'usuario', NULL, NULL),
-('kevirgitano@gmail.com', 'kevin', 'kevin', b'1', 'usuario', NULL, NULL),
-('Mohamedhnina@gmail.com', 'mohamed', 'mohamed', b'1', 'usuario', NULL, NULL),
-('sergio.gps95@gmail.com', 'sergio', 'sergio', b'1', 'usuario', NULL, NULL);
+INSERT INTO `Usuarios` (`userID`, `email`, `username`, `password`, `activo`, `role`, `fechaCreacion`, `fechaUltimoAcceso`) VALUES
+(1, 'admin@admin.com', 'admin', 'admin', b'1', 'admin', NULL, NULL),
+(2, 'jjcanada@ual.es', 'jjcanada', 'jjcanada', b'1', 'usuario', NULL, NULL),
+(3, 'kevirgitano@gmail.com', 'kevin', 'kevin', b'1', 'usuario', NULL, NULL),
+(4, 'Mohamedhnina@gmail.com', 'mohamed', 'mohamed', b'1', 'usuario', NULL, NULL),
+(5, 'sergio.gps95@gmail.com', 'sergio', 'sergio', b'1', 'usuario', NULL, NULL);
 
 --
 -- Índices para tablas volcadas
@@ -57,7 +58,18 @@ INSERT INTO `Usuarios` (`email`, `username`, `password`, `activo`, `role`, `fech
 -- Indices de la tabla `Usuarios`
 --
 ALTER TABLE `Usuarios`
-  ADD PRIMARY KEY (`username`);
+  ADD PRIMARY KEY (`username`),
+  ADD KEY `userID` (`userID`);
+
+--
+-- AUTO_INCREMENT de las tablas volcadas
+--
+
+--
+-- AUTO_INCREMENT de la tabla `Usuarios`
+--
+ALTER TABLE `Usuarios`
+  MODIFY `userID` int(9) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

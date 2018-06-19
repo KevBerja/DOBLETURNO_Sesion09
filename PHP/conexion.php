@@ -1,8 +1,18 @@
 <?php
-    $con = mysqli_connect("localhost", "root", "", "DOBLETURNO");
+    
+class conexion {
 
-    if(!$con){
-        echo "No se ha podido conectar correctamente con la BD." . mysql_error();
-        exit;
-    }
+  protected $connection;
+
+  public function __construct()
+  {
+    $server = "localhost";
+    $userDB = "root";
+    $passwordDB = "";
+    $db = "DOBLETURNO";
+
+    $this->connection = new mysqli($server, $userDB, $passwordDB, $db);  
+  }
+
+}
 ?>
