@@ -1,9 +1,9 @@
 <?php
-if(!class_exists('conexion')){
-  include 'conexion.php';
-}
 
-class registerUser extends conexion
+include 'conexion_BD.php';
+
+
+class registerUser extends conexion_BD
 {
     public function addUser($email,$username,$password,$activo,$role,$fechaCreacion)
     {

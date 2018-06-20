@@ -1,5 +1,5 @@
 <?php
-include 'registerUser.php';
+include '../models/registerUser.php';
 
 $email=$_POST["emailR"];
 $username=$_POST["usernameR"];

@@ -2,15 +2,15 @@
 -- version 4.8.0.1
 -- https://www.phpmyadmin.net/
 --
--- Servidor: localhost
--- Tiempo de generación: 19-06-2018 a las 19:43:22
+-- Servidor: 127.0.0.1
+-- Tiempo de generación: 20-06-2018 a las 13:25:34
 -- Versión del servidor: 10.1.32-MariaDB
--- Versión de PHP: 5.6.36
+-- Versión de PHP: 7.2.5
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
 START TRANSACTION;
-SET time_zone = "+01:00";
+SET time_zone = "+00:00";
 
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
@@ -21,15 +21,16 @@ SET time_zone = "+01:00";
 --
 -- Base de datos: `dobleturno`
 --
-
+DROP SCHEMA IF EXISTS dobleturno;
 -- --------------------------------------------------------
-
+CREATE SCHEMA dobleturno;
+USE dobleturno;
 --
 -- Estructura de tabla para la tabla `usuarios`
 --
 
-CREATE TABLE IF NOT EXISTS `Usuarios` (
-  `userID` int(9) NOT NULL AUTO_INCREMENT,
+CREATE TABLE `usuarios` (
+  `userID` int(9) NOT NULL,
   `email` varchar(40) COLLATE utf8_bin NOT NULL,
   `username` varchar(20) COLLATE utf8_bin NOT NULL,
   `password` varchar(20) COLLATE utf8_bin NOT NULL,
@@ -43,7 +44,7 @@ CREATE TABLE IF NOT EXISTS `Usuarios` (
 -- Volcado de datos para la tabla `usuarios`
 --
 
-INSERT INTO `Usuarios` (`userID`, `email`, `username`, `password`, `activo`, `role`, `fechaCreacion`, `fechaUltimoAcceso`) VALUES
+INSERT INTO `usuarios` (`userID`, `email`, `username`, `password`, `activo`, `role`, `fechaCreacion`, `fechaUltimoAcceso`) VALUES
 (1, 'admin@admin.com', 'admin', 'admin', b'1', 'admin', NULL, NULL),
 (2, 'jjcanada@ual.es', 'jjcanada', 'jjcanada', b'1', 'usuario', NULL, NULL),
 (3, 'kevirgitano@gmail.com', 'kevin', 'kevin', b'1', 'usuario', NULL, NULL),
@@ -55,9 +56,9 @@ INSERT INTO `Usuarios` (`userID`, `email`, `username`, `password`, `activo`, `ro
 --
 
 --
--- Indices de la tabla `Usuarios`
+-- Indices de la tabla `usuarios`
 --
-ALTER TABLE `Usuarios`
+ALTER TABLE `usuarios`
   ADD PRIMARY KEY (`userID`);
 
 --
@@ -65,9 +66,9 @@ ALTER TABLE `Usuarios`
 --
 
 --
--- AUTO_INCREMENT de la tabla `Usuarios`
+-- AUTO_INCREMENT de la tabla `usuarios`
 --
-ALTER TABLE `Usuarios`
+ALTER TABLE `usuarios`
   MODIFY `userID` int(9) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 COMMIT;
 

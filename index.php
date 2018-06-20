@@ -13,7 +13,7 @@ session_start();
 <div class="row">
 <div class="col-md-6">
 		<h2>Login</h2>
-		<form role="form" name="login" action="PHP/loguer.php" method="POST">
+		<form role="form" name="login" action="PHP/Controllers/loguer.php" method="POST">
 		  <div class="form-group">
 		    <label for="username">Username</label>
 		    <input type="text" class="form-control" id="username" name="username" placeholder="Username">

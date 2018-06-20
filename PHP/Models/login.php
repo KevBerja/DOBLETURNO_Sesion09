@@ -1,10 +1,8 @@
 <?php
 
-if(!class_exists('conexion')){
-  include 'conexion.php';
-}
+include 'conexion_BD.php';
 
-class login extends conexion
+class login extends conexion_BD
 {
     public function loginUser($user,$pass)
     {

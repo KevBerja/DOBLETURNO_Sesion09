@@ -8,7 +8,7 @@
 </head>
 <body>
 	<div class="col-md-6 col-md-offset-3" id="contenido">
-		<form id="formularioRegistro" role="form" action="PHP/register.php" method="POST">
+		<form id="formularioRegistro" role="form" action="PHP/Controllers/register.php" method="POST">
 			<h1>Register a new user</h1>
 			<br></br>
 			<div class="form-group">
