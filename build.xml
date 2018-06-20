@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project name="BUILD" default="build" basedir=".">	
+	<target name="create_data_base">
+       <pdosqlexec url="mysql:host=localhost;dbname=DOBLETURNO" userid="root" password=""> 
+			<transaction src="bd/dobleturno.sql"/> 			
+		</pdosqlexec> 
+		
+	</target>
+	
+	<target name="clean">
+		<delete dir="./reports"/>
+		<mkdir dir="./reports/coverage"/>
+		
+		<delete dir="./apidocs"/>
+		<mkdir dir="./apidocs"/>
+		
+		<delete file="./phing.zip" />
+	</target>
+	
+	<target name="test">			 
+		<exec dir="." command="phpunit --log-junit reports/unitreport.xml test/" />
+	</target>
+	
+	<target name="testCoverage">			 
+		<exec dir="." command="phpunit --coverage-html reports/coverage --whitelist php/class test/" />
+	</target>
+	
+	<target name="testCoverageClover">			 
+		<exec dir="." command="phpunit --coverage-clover reports/coverage/coverage.xml --whitelist php/class test/" />
+	</target>
+	
+	<target name="doc">
+		<phpdoc2 title="API Documentation" destdir="./apidocs" template="responsive"> 
+			<fileset dir="./php/models"> 
+				<include name="*/.php" /> 
+			</fileset> 
+		</phpdoc2> 
+	</target>
+	
+	<target name="ZIPTask">
+		<zip destfile="phing.zip">
+			<fileset dir=".">
+				<include name="*/*" />
+			</fileset>
+		</zip>
+	</target>
+	
+	<target name="build" depends="create_data_base, clean, test, testCoverage, testCoverageClover, doc, ZIPTask"/>
+</project>
