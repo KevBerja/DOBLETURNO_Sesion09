@@ -1,5 +1,5 @@
 <?php
-include("conexion.php");
+include("models/bd.php");
 
     $usuarios = mysqli_query($con, "SELECT * FROM usuarios");
 

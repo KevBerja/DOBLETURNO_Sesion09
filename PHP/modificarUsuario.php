@@ -1,5 +1,5 @@
 <?php
-    include("conexion.php");
+    include("/models/bd.php");
     $email = $_POST['email'];
     $nombre = $_POST['nombre'];
     $contra = $_POST['contra'];
