@@ -46,5 +46,5 @@
 		</zip>
 	</target>
 	
-	<target name="build" depends="create_data_base, clean, test, testCoverage, testCoverageClover, doc"/>
+	<target name="build" depends="create_data_base, clean, test,testCoverageClover, testCoverage, doc"/>
 </project>

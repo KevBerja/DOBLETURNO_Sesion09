@@ -1,8 +1,8 @@
 <?php
-
+use PHPUnit\Framework\TestCase;
 require_once "php/models/login.php";
 
-final class login_Test extends PHPUnit_Framework_TestCase
+final class login_Test extends TestCase
 {
 	private $log;
 /**
@@ -63,5 +63,15 @@ public function getIDTest(){
 
   $resultado = $this->log->getIDUser($user);
   $this->assertEquals(1,$resultado);
+  }
+  
+/**
+* @test
+*/
+public function getIDErrorTest(){
+  $user = "manoli";
+
+  $resultado = $this->log->getIDUser($user);
+  $this->assertEquals(-1,$resultado);
   }
 }
