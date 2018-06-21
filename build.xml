@@ -2,7 +2,7 @@
 
 <project name="DOBLETURNO_Sesion09" default="build" basedir=".">	
 	<target name="create_data_base">
-       <pdosqlexec url="mysql:host=localhost;dbname=DOBLETURNO" userid="root" password=""> 
+       <pdosqlexec url="mysql:host=localhost;dbname=DOBLETURNO" userid="root" password="dobleturno"> 
 			<transaction src="bd/dobleturno.sql"/> 			
 		</pdosqlexec> 
 		
