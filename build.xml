@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<project name="BUILD" default="build" basedir=".">	
+<project name="DOBLETURNO_Sesion09" default="build" basedir=".">	
 	<target name="create_data_base">
        <pdosqlexec url="mysql:host=localhost;dbname=DOBLETURNO" userid="root" password=""> 
 			<transaction src="bd/dobleturno.sql"/> 			
@@ -23,11 +23,11 @@
 	</target>
 	
 	<target name="testCoverage">			 
-		<exec dir="." command="phpunit --coverage-html reports/coverage --whitelist php/class test/" />
+		<exec dir="." command="phpunit --coverage-html reports/coverage --whitelist php/models test/" />
 	</target>
 	
 	<target name="testCoverageClover">			 
-		<exec dir="." command="phpunit --coverage-clover reports/coverage/coverage.xml --whitelist php/class test/" />
+		<exec dir="." command="phpunit --coverage-clover reports/coverage/coverage.xml --whitelist php/models test/" />
 	</target>
 	
 	<target name="doc">
@@ -46,5 +46,5 @@
 		</zip>
 	</target>
 	
-	<target name="build" depends="create_data_base, clean, test, testCoverage, testCoverageClover, doc, ZIPTask"/>
+	<target name="build" depends="create_data_base, clean, test, testCoverage, testCoverageClover, doc"/>
 </project>

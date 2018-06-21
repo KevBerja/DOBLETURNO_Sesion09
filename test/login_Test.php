@@ -1,9 +1,8 @@
 <?php
 
-use PHPUnit\Framework\TestCase;
 require_once "php/models/login.php";
 
-final class login_Test extends TestCase
+final class login_Test extends PHPUnit_Framework_TestCase
 {
 	private $log;
 /**
@@ -61,9 +60,8 @@ public function loginPassAdminError(){
 */
 public function getIDTest(){
   $user = "admin";
-  $pass = "admin";
-  
-  $resultado = $this->log->getIDUser($user,$pass);
+
+  $resultado = $this->log->getIDUser($user);
   $this->assertEquals(1,$resultado);
   }
 }

@@ -1,6 +1,8 @@
 <?php
 
-include 'bd.php';
+if(!class_exists('bd')){
+  include 'bd.php';
+}
 
 class login extends bd
 {
@@ -19,16 +21,17 @@ class login extends bd
       return 0;
     }
 
-    public function getIDUser($user,$pass)
+    public function getIDUser($user)
     {
       $mysqli=new mysqli("localhost","root","","DOBLETURNO");
-      $cadenaSQL = "SELECT userID FROM Usuarios WHERE username='$user' AND password='$pass'";
+      $cadenaSQL = "SELECT userID FROM Usuarios WHERE username='$user'";
       $result=$mysqli->query($cadenaSQL);
       $rows=$result->num_rows;
       $userID;
       if($rows > 0) {
-		$row = $result->fetch_assoc();
+		  $row = $result->fetch_assoc();
         $userID = $row['userID'];
+        return $userID;
       }
       return -1;
     }

@@ -19,7 +19,7 @@
 		    <input type="password" class="form-control" id="password" name="password" placeholder="Password">
 		  </div>
 		  <button type="submit" class="btn btn-primary">Sign In</button>
-		  <button type="button" class="btn btn-default" onclick = "location='indexRegister.html'">Sign Up</button>
+		  <button type="button" class="btn btn-default" onclick = "location='indexRegister.php'">Sign Up</button>
 		</form>
 				</div>
 			</div>

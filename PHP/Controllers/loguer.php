@@ -19,7 +19,7 @@ else if($resultadoUser==1)
 {
   $_SESSION['ID']=$resultadoID;
   $_SESSION['username']=$user;
-	header('Location: ../../indexUsuario.html');
+	header('Location: ../../indexUsuario.php');
 
 
 }
@@ -27,6 +27,6 @@ else
 {
   $_SESSION['ID']=$resultadoID;
   $_SESSION['username']=$user;
-  header('Location: ../../indexAdmin.html');
+  header('Location: ../../indexAdmin.php');
 }
 ?>
