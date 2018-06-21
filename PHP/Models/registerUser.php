@@ -1,13 +1,14 @@
 <?php
 
-include 'bd.php';
-
+if(!class_exists('bd')){
+  include 'bd.php';
+}
 
 class registerUser extends bd
 {
     public function addUser($email,$username,$password,$activo,$role,$fechaCreacion)
     {
-      $cadenaSQL = "INSERT INTO Usuarios (username, email, password, activo, role, fechaCreacion) VALUES ('$email','$username','$password','$activo', '$role', '$fechaCreacion')";
+      $cadenaSQL = "INSERT INTO Usuarios (email, username, password, activo, role, fechaCreacion) VALUES ('$email','$username','$password','$activo', '$role', '$fechaCreacion')";
       $resultadoUser = $this->connection->query($cadenaSQL);
 
     }

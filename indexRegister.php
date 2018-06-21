@@ -4,7 +4,7 @@
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css"></link>
 	<script src="jQuery/jquery-3.3.1.min.js"></script>
 	<script src="jQuery/register.js"></script>
-	<title>Register</title>
+	<title>New User</title>
 </head>
 <body>
 	<div class="col-md-6 col-md-offset-3" id="contenido">
@@ -23,7 +23,7 @@
 			    <input type="password" class="form-control" id="password" name="passwordR" placeholder="Enter password">
 		  	</div>
 	  		<button type="submit" class="btn btn-primary">Validate</button>
-	  		<button type="button" class="btn btn-default" onclick = "location='index.html'">Back</button>
+	  		<button type="button" class="btn btn-default" onclick = "location='index.php'">Back</button>
 		</form>
 </div>
 </body>
