@@ -1,6 +1,6 @@
 <?php
     
-class conexion_BD{
+class bd{
 
   protected $connection;
 

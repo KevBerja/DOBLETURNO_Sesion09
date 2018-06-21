@@ -1,9 +1,9 @@
 <?php
 
-include 'conexion_BD.php';
+include 'bd.php';
 
 
-class registerUser extends conexion_BD
+class registerUser extends bd
 {
     public function addUser($email,$username,$password,$activo,$role,$fechaCreacion)
     {

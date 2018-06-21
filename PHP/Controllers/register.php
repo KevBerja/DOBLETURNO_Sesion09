@@ -21,6 +21,7 @@ if($resultado==0){
 }else{
   $registro->addUser($email,$username,$password,$activo,$role,$fechaCreacion);
   echo "The user has been created successfully";
+  header('Location: ../../index.html');
 }
 
 ?>
