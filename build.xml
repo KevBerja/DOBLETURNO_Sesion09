@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <project name="DOBLETURNO_Sesion09" default="build" basedir=".">	
-	<target name="create_data_base">
+	<!--<target name="create_data_base">
        <pdosqlexec url="mysql:host=localhost;dbname=DOBLETURNO" userid="root" password="dobleturno"> 
 			<transaction src="bd/dobleturno.sql"/> 			
 		</pdosqlexec> 
 		
-	</target>
+	</target>-->
 	
 	<target name="clean">
 		<delete dir="./reports"/>
@@ -46,5 +46,5 @@
 		</zip>
 	</target>
 	
-	<target name="build" depends="create_data_base, clean, test,testCoverageClover, testCoverage, doc"/>
+	<target name="build" depends="clean, test, testCoverageClover, testCoverage, doc"/>
 </project>
