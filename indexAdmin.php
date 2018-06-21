@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html lang ="es">
 	<head>
 		<meta charset="UTF-8">
@@ -13,8 +12,8 @@
 			<h1>Administrador</h1>
 			<p>Bienvenido Administrador, aquí se muestran las acciones que tienes disponibles:</p>
 			<br>
-			<button type="button" class="btn btn-default" onclick = "location='listadoUsuarios.html'"> Listado Usuarios </button>
-			<button type="button" class="btn btn-default" onclick = "location='crearUsuarios.html'"> Crear usuarios </button>
+			<button type="button" class="btn btn-default" onclick = "location='listadoUsuarios.php'"> Listado Usuarios </button>
+			<button type="button" class="btn btn-default" onclick = "location='crearUsuarios.php'"> Crear usuarios </button>
 		</div>
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 	</body>
