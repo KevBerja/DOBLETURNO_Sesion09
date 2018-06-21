@@ -1,8 +1,8 @@
 <?php
 
-include 'conexion_BD.php';
+include 'bd.php';
 
-class login extends conexion_BD
+class login extends bd
 {
     public function loginUser($user,$pass)
     {
