@@ -23,7 +23,7 @@ class login extends bd
 
     public function getIDUser($user)
     {
-      $mysqli=new mysqli("localhost","root","","DOBLETURNO");
+      $mysqli=new mysqli("localhost","root","dobleturno","dobleturno");
       $cadenaSQL = "SELECT userID FROM Usuarios WHERE username='$user'";
       $result=$mysqli->query($cadenaSQL);
       $rows=$result->num_rows;

@@ -2,8 +2,8 @@
 
 <project name="DOBLETURNO_Sesion09" default="build" basedir=".">	
 	<target name="create_data_base">
-       <pdosqlexec url="mysql:host=localhost;dbname=DOBLETURNO" userid="root" password="dobleturno"> 
-			<transaction src="bd/dobleturno.sql"/> 			
+       <pdosqlexec url="mysql:host=localhost;dbname=dobleturno" userid="root" password="dobleturno"> 
+			<transaction src="BD/dobleturno.sql"/> 			
 		</pdosqlexec> 
 		
 	</target>
@@ -23,16 +23,16 @@
 	</target>
 	
 	<target name="testCoverage">			 
-		<exec dir="." command="phpunit --coverage-html reports/coverage --whitelist php/models test/" />
+		<exec dir="." command="phpunit --coverage-html reports/coverage --whitelist PHP/Models test/" />
 	</target>
 	
 	<target name="testCoverageClover">			 
-		<exec dir="." command="phpunit --coverage-clover reports/coverage/coverage.xml --whitelist php/models test/" />
+		<exec dir="." command="phpunit --coverage-clover reports/coverage/coverage.xml --whitelist PHP/Models test/" />
 	</target>
 	
 	<target name="doc">
 		<phpdoc2 title="API Documentation" destdir="./apidocs" template="responsive"> 
-			<fileset dir="./php/models"> 
+			<fileset dir="./test"> 
 				<include name="*/.php" /> 
 			</fileset> 
 		</phpdoc2> 

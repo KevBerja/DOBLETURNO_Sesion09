@@ -45,7 +45,7 @@
 				</tr>
 			  </tbody>
 			</table>
-			<button type="button" class="btn btn-default" onclick = "location='indexAdmin.html'">Volver</button>
+			<button type="button" class="btn btn-default" onclick = "location='indexAdmin.php'">Volver</button>
 		</div>
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 	</body>            
