@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1529591463">
-  <project timestamp="1529591463">
+<coverage generated="1529610819">
+  <project timestamp="1529610819">
     <file name="C:\xampp\htdocs\DOBLETURNO_Sesion09\PHP\Models/bd.php">
       <class name="bd" namespace="global">
         <metrics complexity="1" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="6" coveredstatements="6" elements="7" coveredelements="7"/>
@@ -12,7 +12,7 @@
       <line num="12" type="stmt" count="8"/>
       <line num="14" type="stmt" count="8"/>
       <line num="15" type="stmt" count="8"/>
-      <metrics loc="17" ncloc="17" classes="1" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="6" coveredstatements="6" elements="7" coveredelements="7"/>
+      <metrics loc="18" ncloc="18" classes="1" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="6" coveredstatements="6" elements="7" coveredelements="7"/>
     </file>
     <file name="C:\xampp\htdocs\DOBLETURNO_Sesion09\PHP\Models/login.php">
       <class name="login" namespace="global">
@@ -55,6 +55,6 @@
       <line num="24" type="stmt" count="1"/>
       <metrics loc="27" ncloc="27" classes="1" methods="2" coveredmethods="2" conditionals="0" coveredconditionals="0" statements="8" coveredstatements="8" elements="10" coveredelements="10"/>
     </file>
-    <metrics files="3" loc="82" ncloc="82" classes="3" methods="5" coveredmethods="5" conditionals="0" coveredconditionals="0" statements="31" coveredstatements="31" elements="36" coveredelements="36"/>
+    <metrics files="3" loc="83" ncloc="83" classes="3" methods="5" coveredmethods="5" conditionals="0" coveredconditionals="0" statements="31" coveredstatements="31" elements="36" coveredelements="36"/>
   </project>
 </coverage>

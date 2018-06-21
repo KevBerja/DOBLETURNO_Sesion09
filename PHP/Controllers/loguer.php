@@ -1,5 +1,5 @@
 <?php
-include '../models/login.php';
+include '../Models/login.php';
 
 $user=$_POST["username"];
 $pass=$_POST["password"];

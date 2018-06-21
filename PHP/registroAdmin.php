@@ -1,5 +1,5 @@
 <?php
-include("models/bd.php");
+include("Models/bd.php");
 
 $email = $_POST['email'];
 $username = $_POST['usuario'];

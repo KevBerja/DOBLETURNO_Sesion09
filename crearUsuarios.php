@@ -48,7 +48,7 @@
 				<div class="form-group">
 					<div class="col-sm-12">
 						<button type="submit" class="btn btn-default">Enviar</button>
-						<button type="button" class="btn btn-default" onclick = "location='indexAdmin.html'">Volver</button>
+						<button type="button" class="btn btn-default" onclick = "location='indexAdmin.php'">Volver</button>
 					</div>
 				</div>
 			</form>

@@ -9,7 +9,7 @@ class bd{
     $server = "localhost";
     $userDB = "root";
     $passwordDB = "dobleturno";
-    $db = "DOBLETURNO";
+    $db = "dobleturno";
 
     $this->connection = new mysqli($server, $userDB, $passwordDB, $db);  
   }
