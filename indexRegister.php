@@ -11,15 +11,15 @@
 		<form id="formSignUp" role="form" action="PHP/Controllers/register.php" method="POST">
 			<br/><h2>New User</h2><br/>
 			<div class="form-group">
-			    <label for="txtEmail">Email</label>
+			    <label for="email">Email</label>
 			    <input type="text" class="form-control" id="email" name="emailR" placeholder="Enter email">
 		  	</div>
 			  	<div class="form-group">
-			    <label for="txtUsuario">Username</label>
+			    <label for="username">Username</label>
 			    <input type="text" class="form-control" id="username" name="usernameR" placeholder="Enter username">
 		  	</div>
 			  	<div class="form-group">
-			    <label for="txtPassword">Password</label>
+			    <label for="password">Password</label>
 			    <input type="password" class="form-control" id="password" name="passwordR" placeholder="Enter password">
 		  	</div>
 	  		<button type="submit" class="btn btn-primary">Validate</button>
