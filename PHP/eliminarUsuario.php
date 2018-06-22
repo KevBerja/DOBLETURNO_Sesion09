@@ -1,5 +1,7 @@
 <?php
-include("Models/bd.php");
+
+include 'Models/bd.php';
+
 $email = $_POST['email'];
 
     $delUser = mysqli_query($con, "DELETE FROM usuarios WHERE email ='".$email."'");
