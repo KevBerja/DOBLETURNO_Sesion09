@@ -41,7 +41,7 @@
 	<target name="ZIPTask">
 		<zip destfile="phing.zip">
 			<fileset dir=".">
-				<include name="*/*" />
+				<include name="**/**" />
 			</fileset>
 		</zip>
 	</target>
