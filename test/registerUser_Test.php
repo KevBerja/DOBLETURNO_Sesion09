@@ -1,6 +1,6 @@
 <?php
 use PHPUnit\Framework\TestCase;
-require_once "php/models/registerUser.php";
+require_once "PHP/Models/registerUser.php";
 
 final class registerUser_Test extends TestCase
 {

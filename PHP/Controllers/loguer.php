@@ -5,7 +5,7 @@ $user=$_POST["username"];
 $pass=$_POST["password"];
 $login = new login();
 $resultadoUser = $login->loginUser($user,$pass);
-$resultadoID = $login->getIDUser($user,$pass);
+$resultadoID = $login->getIDUser($user);
 
 session_start();
 

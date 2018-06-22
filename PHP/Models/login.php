@@ -8,7 +8,7 @@ class login extends bd
 {
     public function loginUser($user,$pass)
     {
-      $cadenaSQL="SELECT userID, email, username, password, role FROM Usuarios WHERE username='$user' AND password='$pass'";
+      $cadenaSQL="SELECT userID, email, username, password, role FROM usuarios WHERE username='$user' AND password='$pass'";
       $result=$this->connection->query($cadenaSQL);
       while($usuario = $result->fetch_assoc())
       {
@@ -24,7 +24,7 @@ class login extends bd
     public function getIDUser($user)
     {
       $mysqli=new mysqli("localhost","root","dobleturno","dobleturno");
-      $cadenaSQL = "SELECT userID FROM Usuarios WHERE username='$user'";
+      $cadenaSQL = "SELECT userID FROM usuarios WHERE username='$user'";
       $result=$mysqli->query($cadenaSQL);
       $rows=$result->num_rows;
       $userID;

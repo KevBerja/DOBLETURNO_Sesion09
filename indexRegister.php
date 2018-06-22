@@ -12,7 +12,7 @@
 			<br/><h2>New User</h2><br/>
 			<div class="form-group">
 			    <label for="txtEmail">Email</label>
-			    <input type="text" class="form-control" id="email" name="emailR" placeholder="Username"">
+			    <input type="text" class="form-control" id="email" name="emailR" placeholder="Enter email">
 		  	</div>
 			  	<div class="form-group">
 			    <label for="txtUsuario">Username</label>
