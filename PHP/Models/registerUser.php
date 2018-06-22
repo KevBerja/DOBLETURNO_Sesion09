@@ -8,7 +8,7 @@ class registerUser extends bd
 {
     public function addUser($email,$username,$password,$activo,$role,$fechaCreacion)
     {
-      $cadenaSQL = "INSERT INTO usuarios (email, username, password, activo, role, fechaCreacion) VALUES ('$email','$username','$password','$activo', '$role', '$fechaCreacion')";
+      $cadenaSQL = "INSERT INTO usuarios(email, username, password, activo, role, fechaCreacion) VALUES ('$email','$username','$password','$activo', '$role', '$fechaCreacion')";
       $resultadoUser = $this->connection->query($cadenaSQL);
 
     }
