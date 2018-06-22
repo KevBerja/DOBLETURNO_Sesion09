@@ -1,5 +1,6 @@
 <?php
-include("Models/bd.php");
+
+include 'Models/bd.php';
 
 $email = $_POST['email'];
 $username = $_POST['usuario'];
@@ -37,7 +38,7 @@ if (empty($_POST['rol'])) {
 
 //Generando respuesta
 if(empty($errores)) {
-	$result = mysqli_query($con, "INSERT Usuarios(email, username, password, activo, role) VALUES('".$email."', '".$username."', '".$password."', '1', '".$rol."')");
+	$result = mysqli_query($con, "INSERT INTO usuarios (email, username, password, activo, role) VALUES('".$email."', '".$username."', '".$password."', '1', '".$rol."')");
 	$datos['exito'] = true;
 	$datos['mensaje'] = 'El registro se ha realizado correctamente.';
 } else {
