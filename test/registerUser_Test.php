@@ -19,7 +19,7 @@ public function test_addUser(){
   $email = "user@user.com";
   $username = "user";
   $password = "user";
-  $activo = "1";
+  $activo = 1;
   $role = 'usuario';
   $year = date("y");
   $month = date("m");
@@ -40,7 +40,7 @@ public function test_addUserExists(){
   $email = "jjcanada@ual.es";
   $username = "jjcanada";
   $password = "jjcanada";
-  $activo = "1";
+  $activo = 1;
   $role = 'usuario';
   $year = date("y");
   $month = date("m");
