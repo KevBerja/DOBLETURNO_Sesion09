@@ -4,7 +4,7 @@ include '../Models/registerUser.php';
 $email=$_POST["emailR"];
 $username=$_POST["usernameR"];
 $password=$_POST["passwordR"];
-$activo ='1';
+$activo = 1;
 $role = 'usuario';
 $year = date("y");
 $month = date("m");

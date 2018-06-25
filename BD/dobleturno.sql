@@ -34,7 +34,7 @@ CREATE TABLE `usuarios` (
   `email` varchar(40) COLLATE utf8_bin NOT NULL,
   `username` varchar(20) COLLATE utf8_bin NOT NULL,
   `password` varchar(20) COLLATE utf8_bin NOT NULL,
-  `activo` bit(1) NOT NULL,
+  `activo` tinyint(1) NOT NULL,
   `role` varchar(7) COLLATE utf8_bin NOT NULL,
   `fechaCreacion` date DEFAULT NULL,
   `fechaUltimoAcceso` date DEFAULT NULL
@@ -45,11 +45,11 @@ CREATE TABLE `usuarios` (
 --
 
 INSERT INTO `usuarios` (`userID`, `email`, `username`, `password`, `activo`, `role`, `fechaCreacion`, `fechaUltimoAcceso`) VALUES
-(1, 'admin@admin.com', 'admin', 'admin', b'1', 'admin', NULL, NULL),
-(2, 'jjcanada@ual.es', 'jjcanada', 'jjcanada', b'1', 'usuario', NULL, NULL),
-(3, 'kevirgitano@gmail.com', 'kevin', 'kevin', b'1', 'usuario', NULL, NULL),
-(4, 'Mohamedhnina@gmail.com', 'mohamed', 'mohamed', b'1', 'usuario', NULL, NULL),
-(5, 'sergio.gps95@gmail.com', 'sergio', 'sergio', b'1', 'usuario', NULL, NULL);
+(1, 'admin@admin.com', 'admin', 'admin', 1, 'admin', '2018-06-08', NULL),
+(2, 'jjcanada@ual.es', 'jjcanada', 'jjcanada', 1, 'usuario', '2018-06-08', NULL),
+(3, 'kevirgitano@gmail.com', 'kevin', 'kevin', 1, 'usuario', '2018-06-08', NULL),
+(4, 'Mohamedhnina@gmail.com', 'mohamed', 'mohamed', 1, 'usuario', '2018-06-08', NULL),
+(5, 'sergio.gps95@gmail.com', 'sergio', 'sergio', 1, 'usuario', '2018-06-08', NULL);
 
 --
 -- Índices para tablas volcadas
