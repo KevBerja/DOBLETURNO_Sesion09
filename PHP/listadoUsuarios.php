@@ -2,10 +2,10 @@
 
 include 'Models/bd.php';
     
-$usuarios = mysqli_query($con, "SELECT * FROM usuarios");
+$usuarios = mysqli_query($connection, "SELECT * FROM usuarios");
 $datos = $usuarios -> fetch_all();
 
 //echo json_encode($datos);
 
-$con->close();
+$connection->close();
 ?>
