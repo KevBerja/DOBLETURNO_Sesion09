@@ -8,13 +8,25 @@ class login extends bd
 {
     public function loginUser($user,$pass)
     {
-      $cadenaSQL="SELECT userID, email, username, password, role FROM usuarios WHERE username='$user' AND password='$pass'";
+      $cadenaSQL="SELECT userID, email, username, password, activo, role FROM usuarios WHERE username='$user' AND password='$pass'";
       $result=$this->connection->query($cadenaSQL);
       while($usuario = $result->fetch_assoc())
       {
-        if($usuario["role"]=="usuario") {
+        if($usuario["role"]=="usuario" && $usuario["activo"]==1) {
+            $year = date("y");
+            $month = date("m");
+            $day = date("d");
+            $fechaAcceso = $year."-".$month."-".$day;
+            $cadenaSQL2="UPDATE usuarios SET fechaUltimoAcceso = '$fechaAcceso' WHERE username = '$user'";
+            $result2=$this->connection->query($cadenaSQL2);
           return 1;
-        } else if ($usuario["role"]=="admin") {
+        } else if ($usuario["role"]=="admin" && $usuario["activo"]==1) {
+            $year = date("y");
+            $month = date("m");
+            $day = date("d");
+            $fechaAcceso = $year."-".$month."-".$day;
+            $cadenaSQL2="UPDATE usuarios SET fechaUltimoAcceso = '$fechaAcceso' WHERE username = '$user'";
+            $result2=$this->connection->query($cadenaSQL2);
           return 2;
         }
       }
