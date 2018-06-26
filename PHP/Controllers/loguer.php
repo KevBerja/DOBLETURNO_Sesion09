@@ -12,7 +12,7 @@ session_start();
 $_POST["resultadoUser"]=$resultadoUser;
 if($resultadoUser==0)
 {
-	echo "Login error. Please, try again.";
+	echo "Login error. Please, try again. It's possible that you have been unactivated. If this is the case, please contact with the administrator.";
 
 }
 else if($resultadoUser==1)
